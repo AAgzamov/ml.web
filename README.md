@@ -2,7 +2,7 @@
 <br>
 Website: https://ml-web-seven.vercel.app/
 <br>
-Deployed on [Vercel](https://vercel.com)
+Deployed on https://vercel.com/
  
 ### Development
 Powered by [Next.js](https://nextjs.org/)
