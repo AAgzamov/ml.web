@@ -1,0 +1,703 @@
+/*  Fredoka One, Baloo 2 */
+/*@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2&display=swap');*/
+
+/* GLOBAL */
+.not-found-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Fredoka One", monospace;
+    font-size: 5vw;
+    background-color: dimgrey;
+}
+
+.progress-bar {
+    width: .3vw;
+    background-color: #bf00ff;
+    box-shadow: 0 0 1vw .6vw #bf00ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f2f5;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.global-wrapper-light, .light {
+    color: black;
+    fill: black ;
+}
+
+.global-wrapper-light {
+    background-color: #f0f0f0; /* white */
+}
+
+.global-wrapper-dark, .dark {
+    color: white;
+    fill: white;
+}
+
+.global-wrapper-dark {
+    background-color: black;
+}
+
+/*.global-wrapper {*/
+/*    z-index: 1;*/
+/*}*/
+
+
+/* HEADER */
+.header-wrapper, .header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-wrapper {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Fredoka One, sans-serif;
+    /*border: 2px solid red;*/
+}
+
+.header-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    font-size: 3vw;
+    margin-bottom: 10vh;
+    /*font-size: 40px;*/
+    text-transform: uppercase;
+    -webkit-text-stroke: .15vw #bf00ff;
+    /*border: 2px solid red;*/
+}
+.header-title span {
+    display: inline-block;
+    margin-right: 1vw;
+    /*border: 2px solid white;*/
+}
+.header-content {
+    display: flex;
+    font-size: 1.5vw;
+    /*font-size: 25px;*/
+    text-decoration: underline #bf00ff .2vw;
+    /*border: 2px solid blue;*/
+}
+
+
+/* MAIN */
+.main-wrapper, .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    /*border: 2px solid red;*/
+}
+
+.main-content {
+    flex-direction: column;
+    font-size: 2.2vw;
+    font-family: "Baloo 2", monospace;
+    font-style: oblique;
+    font-weight: bolder;
+    /*border: 1px solid yellow;*/
+}
+
+.main-content div {
+    width: auto;
+    margin-bottom: 10vh;
+    padding: 0 2vw;
+    white-space: break-spaces;
+}
+
+
+/* NAV */
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    /*border: 2px solid red;*/
+}
+.nav-link {
+    width: auto;
+    margin: 4vh 0;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-family: "Fredoka One", sans-serif;
+    /*border: 2px solid green;*/
+}
+
+@keyframes link-hover{
+    to {transform: skewX(-10deg)}
+}
+.nav-link:hover, .menu-wrapper div:hover {
+    animation-name: link-hover;
+    animation-fill-mode: forwards;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+}
+#color-fill, #menu-color-fill {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+}
+#color-fill:after, #menu-color-fill:after {
+    display: inline-block;
+    content: attr(val);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #bf00ff;
+    overflow-x: hidden;
+    transition: width .3s ease-in-out;
+}
+#color-fill:hover:after, #menu-color-fill:hover:after {
+    width: 100%;
+}
+
+
+/* FOOTER */
+.footer-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 80vh;
+    margin-top: 15vh;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*border: 2px solid red;*/
+}
+.footer-block {
+    /*border: 2px solid blue;*/
+    height: 30vh;
+    margin: 5vh 5vw;
+}
+
+.footer-block:nth-of-type(4) {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100vw;
+    height: 20vh;
+    font-size: 2vw;
+    font-family: "Fredoka One", sans-serif;
+}
+
+.footer-title {
+    font-family: "Fredoka One", sans-serif;
+    font-size: 1.9vw;
+    /*border: 2px solid white;*/
+}
+
+.footer-content {
+    margin: 2vh 0;
+    font-size: 1vw;
+    font-weight: bold;
+    font-family: Ubuntu, monospace;
+    /*border: 2px solid green;*/
+}
+
+.simple-link {
+    transition: color .2s ease-in-out;
+    text-decoration: underline #bf00ff 2px;
+}
+.simple-link:hover {
+    color: #bf00ff;
+}
+/*.footer-content a {*/
+/*    transition: color .2s ease-in-out;*/
+/*    text-decoration: underline #bf00ff 2px;*/
+/*}*/
+/*.footer-content a:hover {*/
+/*    color: #bf00ff;*/
+/*}*/
+
+
+.footer-content svg, .footer-content img {
+    width: 3vw;
+    margin: 0 .3vw;
+    transition: transform .2s ease-in-out;
+}
+
+.footer-content svg:hover {
+    transform: translateY(8%);
+}
+
+.footer-content svg g {
+    transition: fill .2s ease-in-out;
+}
+
+.footer-content svg:hover > #github-svg {
+    fill: #bf00ff; /* purple */
+}
+
+.footer-content svg:hover > #linkedin-svg {
+    fill: #1c33ff; /* blue */
+}
+
+.footer-content svg:hover > #youtube-svg {
+    fill: #eb0505; /* red */
+}
+
+.footer-content svg:hover > #instagram-svg {
+    fill: #de1687; /* pink */
+}
+
+.footer-content svg:hover > #telegram-svg {
+    fill: #2a96de; /* light blue */
+}
+
+
+/* MENU */
+.menu-wrapper div {
+    margin: 6vh 0;
+    font-size: 3vw;
+    font-family: "Fredoka One", sans-serif;
+    /*border: 1px solid red;*/
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    width: 4vw;
+    height: 8vh;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    position: absolute;
+    z-index: 3;
+    top: 2vh;
+    right: 1vw;
+    /*right: 10px;*/
+    overflow: hidden;
+    /*border: 2px solid magenta;*/
+}
+
+.menu-svg-bar {
+    transition: fill .2s ease-in-out;
+}
+
+.menu-button svg:hover > .menu-svg-bar {
+    fill: #bf00ff;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+@keyframes themeButtonAppear {
+    from {opacity: 0} to {opacity: 1}
+}
+
+.theme-button {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
+    /*flex-wrap: wrap;*/
+    width: 4vw;
+    height: 8vh;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    position: absolute;
+    z-index: 3;
+    top: 2vh;
+    right: 6vw;
+    /*right: 100px;*/
+    /*overflow: visible;*/
+    /*border: 2px solid magenta;*/
+    animation: themeButtonAppear 1.5s ease-in-out 1 forwards;
+}
+
+
+/*.theme-button svg {*/
+/*    margin-bottom: 5vh;*/
+/*}*/
+
+.moon-svg, .sun-svg {
+    transition: fill .3s ease-in-out;
+}
+
+svg:hover > .moon-svg {
+    fill: black;
+}
+svg:hover > .sun-svg {
+    fill: white;
+}
+
+.moon-svg, .sun-svg {
+    fill: transparent;
+}
+
+.moon-svg {
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.sun-svg {
+    stroke: white;
+    stroke-width: 1px;
+}
+
+
+/* ARROWS */
+@keyframes arrowAnimation {
+    from {transform: translateY(4vh); fill: transparent} to {transform: translateY(0); fill: #c61cff}
+}
+.arrow-down-svg-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16vw;
+    height: 16vh;
+    margin: 0 auto;
+}
+.arrow-down-svg {
+    width: 14vw;
+    height: 16vh;
+    stroke: white;
+    stroke-width: .1px;
+    animation: arrowAnimation 1s ease-in-out infinite alternate;
+}
+
+
+
+/* -- RESPONSIVENESS -- */
+@media (max-width: 1000px) {
+    .header-title {
+        font-size: 30px;
+    }
+    .header-content {
+        font-size: 20px;
+    }
+
+
+    .menu-wrapper div {
+        font-size: 25px;
+        /*border: 1px solid red;*/
+    }
+    .menu-button {
+        width: 50px;
+        height: 100px;
+        /*border: 2px solid magenta;*/
+    }
+
+
+    .theme-button {
+        /*width: 10vw;*/
+        /*height: 5vh;*/
+        width: 50px;
+        height: 50px;
+        left: 2vw;
+        /*border: 2px solid magenta;*/
+        overflow: visible;
+    }
+
+
+    .main-content {
+        font-size: 25px;
+    }
+
+
+    .nav-link {
+        font-size: 4vw;
+        /*border: 2px solid green;*/
+    }
+
+    .footer-wrapper {
+        /*border: 2px solid red;*/
+        margin-top: 0;
+        height: 100vh;
+    }
+    .footer-block {
+        /*border: 2px solid blue;*/
+        margin: 0 0 0 5vw;
+        height: auto;
+    }
+    .footer-block:nth-of-type(4) {
+        height: 10vh;
+        margin-bottom: 20vh;
+        font-size: 30px;
+    }
+    .footer-title {
+        font-size: 25px;
+        /*border: 2px solid white;*/
+    }
+    .footer-content {
+        font-size: 15px;
+        /*border: 2px solid green;*/
+    }
+    .footer-content svg, .footer-content img {
+        width: 40px;
+        margin-right: 10px;
+        height: 40px;
+    }
+
+    .arrow-down-svg-wrapper {
+        width: 100px;
+        /*border: 2px solid red;*/
+    }
+    .arrow-down-svg {
+        width: 100px;
+        /*border: 2px solid green;*/
+    }
+}
+
+@media (max-height: 736px) and (max-width: 500px) {
+    .footer-wrapper {
+        margin-top: -50vh;
+    }
+    .footer-block:nth-of-type(4) {
+        margin-bottom: 10vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .header-title {
+        width: 100vw;
+        /*border: 2px solid green;*/
+        font-size: 40px;
+        margin-bottom: 5vh;
+    }
+    .header-title span {
+        text-align: center;
+        width: 100vw;
+    }
+    .header-content {
+        font-size: 20px;
+    }
+
+
+    .theme-button {
+        left: 2vw;
+        /*border: 2px solid magenta;*/
+    }
+
+    .footer-block:nth-of-type(4) {
+        margin-bottom: 5vh;
+    }
+}
+
+/* TABLETS */
+@media (width: 810px) and (height: 1080px), (width: 800px) and (height: 1280px) {
+    .footer-block {
+        margin: 5vh 5vw;
+    }
+    .footer-block:nth-of-type(4) {
+        margin-bottom: 10vh;
+        font-size: 30px;
+    }
+    .footer-title {
+        font-size: 35px;
+    }
+    .footer-content {
+        font-size: 20px;
+    }
+    .footer-content svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (width: 1080px) and (height: 810px), (width: 1280px) and (height: 800px) {
+    .footer-block:nth-of-type(4) {
+        margin-bottom: 10vh;
+        font-size: 30px;
+    }
+    .footer-title {
+        font-size: 25px;
+    }
+    .footer-content {
+        font-size: 15px;
+    }
+    .footer-content svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+
+/* -- RESPONSIVENESS FOR MOBILE DEVICES -- */
+/*@media (orientation: portrait) {*/
+/*    !* HEADER *!*/
+/*    .header-wrapper, .header-title {*/
+/*        flex-wrap: wrap;*/
+/*    }*/
+
+/*    .header-wrapper {*/
+/*        font-family: "Fredoka One", sans-serif;*/
+/*        !*border: 2px solid red;*!*/
+/*    }*/
+
+/*    .header-title {*/
+/*        width: 80vw;*/
+/*        height: 50vh;*/
+/*        font-size: 10.5vw;*/
+/*        -webkit-text-stroke: .2vh #bf00ff;*/
+/*        !*border: 2px solid red;*!*/
+/*    }*/
+
+/*    .header-content {*/
+/*        font-size: 2.5vh;*/
+/*        text-decoration: underline #bf00ff .5vw;*/
+/*        !*border: 2px solid blue;*!*/
+/*    }*/
+
+
+/*    !* MAIN *!*/
+/*    .main-content {*/
+/*        font-size: 2.5vh;*/
+/*    }*/
+
+/*    .main-content div {*/
+/*        margin-bottom: 3vh;*/
+/*        padding: 0 5vw;*/
+/*    }*/
+
+
+/*    !* NAV *!*/
+/*    .nav-wrapper {*/
+/*        justify-content: center;*/
+
+/*        !*border: 2px solid red;*!*/
+/*    }*/
+/*    .nav-link {*/
+/*        margin: 5vh 0;*/
+/*        font-size: 2vh;*/
+/*        !*border: 2px solid green;*!*/
+/*    }*/
+
+
+/*    !* FOOTER *!*/
+/*    .footer-wrapper {*/
+/*        height: 50vh;*/
+/*        !*border: 2px solid red;*!*/
+/*    }*/
+/*    .footer-block {*/
+/*        !*border: 2px solid blue;*!*/
+/*        height: 12vh;*/
+/*        width: 45vw;*/
+/*        margin: 3vh 0;*/
+/*    }*/
+
+/*    .footer-block:nth-of-type(4) {*/
+/*        font-size: 2vh;*/
+/*        height: 20vh;*/
+/*    }*/
+
+/*    .footer-title {*/
+/*        font-size: 3vh;*/
+/*    }*/
+
+/*    .footer-content {*/
+/*        font-size: 1.5vh;*/
+/*        !*border: 2px solid green;*!*/
+/*    }*/
+
+/*    .footer-content svg {*/
+/*        width: 8vw;*/
+/*        height: 4vh;*/
+/*    }*/
+
+
+/*    !* MENU *!*/
+/*    .menu-wrapper div {*/
+/*        margin: 5vh 0;*/
+/*        font-size: 4vh;*/
+/*        !*border: 1px solid red;*!*/
+/*    }*/
+
+/*    .menu-button {*/
+/*        width: 12vw;*/
+/*        height: 6vh;*/
+/*        !*border: 2px solid magenta;*!*/
+/*    }*/
+
+/*    .theme-button {*/
+/*        width: 12vw;*/
+/*        min-height: 6vh;*/
+/*        right: unset;*/
+/*        left: 2vw;*/
+/*        !*border: 2px solid magenta;*!*/
+/*    }*/
+
+/*    .theme-button svg {*/
+/*        margin-bottom: 6.5vh;*/
+/*    }*/
+
+/*    .moon-svg {*/
+/*        stroke-width: .3vw;*/
+/*    }*/
+
+/*    .sun-svg {*/
+/*        stroke-width: .4vw;*/
+/*    }*/
+
+
+/*    !* ARROWS *!*/
+/*    .arrow-down-svg-wrapper, .arrow-down-svg {*/
+/*        width: 40vw;*/
+/*        height: 16vh;*/
+/*    }*/
+/*}*/
+
+
+/* -- RESPONSIVENESS FOR TABLETS -- */
+/*@media (width: 810px) {*/
+/*    .theme-button {*/
+/*        height: 10vh;*/
+/*    }*/
+/*    .theme-button svg {*/
+/*        margin-bottom: 3vh;*/
+/*    }*/
+/*    .moon-svg {*/
+/*        stroke-width: .2vw;*/
+/*    }*/
+/*    .sun-svg {*/
+/*        stroke-width: .2vw;*/
+/*    }*/
+
+/*}*/
+
+/*@media (width: 800px) {*/
+/*    .theme-button {*/
+/*        height: 10vh;*/
+/*    }*/
+/*    .theme-button svg {*/
+/*        margin-bottom: 5vh;*/
+/*    }*/
+/*    .moon-svg {*/
+/*        stroke-width: .2vw;*/
+/*    }*/
+/*    .sun-svg {*/
+/*        stroke-width: .2vw;*/
+/*    }*/
+
+/*}*/
